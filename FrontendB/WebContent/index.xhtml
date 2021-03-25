@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/templates/template.xhtml">
+		<ui:define name="title">Welcome Page</ui:define>
+		<ui:define name="content">
+			<div id="navigation">
+				<ui:insert name="navigation">
+					<h2> Welcome</h2>
+					<h3> Use the menu to perform various operations </h3>
+					<ul>
+						<li><h:link outcome="/departmentsinfo.xhtml">Departments Information</h:link></li>
+						<li><h:link outcome="/emploeesinfo.xhtml">Employees Information</h:link></li>
+						<li><h:link outcome="/jobsinfo.xhtml">Jobs Information</h:link></li>
+					</ul>
+				</ui:insert>
+			</div>
+		</ui:define>
+	</ui:composition>
+</html>

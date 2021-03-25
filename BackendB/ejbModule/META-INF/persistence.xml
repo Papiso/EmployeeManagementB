@@ -4,7 +4,9 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:/EmpMgtDS</jta-data-source>
 		
-		<class>EmployeeEntity.java</class>
+		<class>Employee.java</class>
+		<class>Department.java</class>
+		<class>Job.java</class>
 
 		<properties>	
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>

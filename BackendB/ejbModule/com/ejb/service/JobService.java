@@ -2,6 +2,7 @@ package com.ejb.service;
 
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,6 +12,7 @@ import com.ejb.entities.Job;
 
 
 @Stateless
+@LocalBean
 public class JobService implements JobServiceLocal {
 	
 	@PersistenceContext(unitName = "EmpMgmtPU")
@@ -28,7 +30,7 @@ public class JobService implements JobServiceLocal {
 
 	@Override
 	public List<Job> getAllJobs() {
-		TypedQuery<Job> query = entityManager.createQuery("SELECT j Job Department j", Job.class);
+		TypedQuery<Job> query = entityManager.createQuery("SELECT j FROM Job j", Job.class);
 		return query.getResultList();
 	}
 

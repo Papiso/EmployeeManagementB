@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"   
+   xmlns:h = "http://java.sun.com/jsf/html"
+   xmlns:ui = "http://java.sun.com/jsf/facelets">
+   
+   <h:body> 
+      <ui:composition template = "templates/template.xhtml">
+         <ui:define name = "content">
+          	<h2>Add New Job</h2>
+	    	<h:form>
+	    		<h:panelGrid columns="2" >
+		    		<h:outputLabel value="Job Title : "/>
+		    	    <h:inputText value="#{jobController.jobModel.title}"></h:inputText>
+	    	     </h:panelGrid>
+	    	    <h:panelGrid columns="2" >
+					<h:outputLabel value="Salary : "/>
+		    	    <h:inputText value="#{jobController.jobModel.salary}"></h:inputText>
+	    	   </h:panelGrid>
+	    	   <h:commandButton value="submit" action="#{jobController.addNewJob}"></h:commandButton>
+	    	</h:form>
+         </ui:define> 			
+      </ui:composition> 
+   
+   </h:body> 
+</html>

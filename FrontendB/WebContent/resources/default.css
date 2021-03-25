@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#title {
+	vertical-align: 20px;
+}
+
+#header {
+	background-color: gray;
+	padding-left: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+	background: #eeeeee;
+	height: 100px;
+	width:900px;
+}
+
+#content {
+	background-color: white;
+	padding-left: 1em;
+	float: left;
+	margin-left: 0.5em;
+	margin-bottom: 1em;
+	background: #eeffaa;
+	height: 400px;
+  	width:900px;
+}
+
+#footer {
+	background-color: silver;
+	clear: both;
+	border-top: 1px solid #CCCCCC;
+	font-size: small;
+	background: #eeeeff;
+	height: 50px;
+	width:920px;
+}

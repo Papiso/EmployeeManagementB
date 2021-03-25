@@ -1,6 +1,7 @@
 package com.ejb.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -25,7 +26,7 @@ public class Department implements Serializable{
 	private String departmentName;
 	
 	@OneToMany(mappedBy = "dept")
-	List<Employee> employees;
+	List<Employee> employees = new ArrayList<Employee>();
 	
 	public int getId() {
 		return id;

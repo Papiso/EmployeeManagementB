@@ -2,6 +2,7 @@ package com.ejb.service;
 
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,6 +12,7 @@ import com.ejb.entities.Department;
 
 
 @Stateless
+@LocalBean
 public class DepartmentService implements DepartmentServiceLocal {
 	
 	@PersistenceContext(unitName = "EmpMgmtPU")

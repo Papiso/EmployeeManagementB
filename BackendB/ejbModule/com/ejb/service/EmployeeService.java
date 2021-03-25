@@ -2,6 +2,7 @@ package com.ejb.service;
 
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -13,6 +14,7 @@ import com.ejb.entities.Employee;
  * Session Bean implementation class EmployeeService
  */
 @Stateless
+@LocalBean
 public class EmployeeService implements EmployeeServiceLocal {
 
 	@PersistenceContext(unitName = "EmpMgmtPU")

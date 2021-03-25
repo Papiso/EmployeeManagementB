@@ -1,6 +1,7 @@
 package com.ejb.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -27,7 +28,7 @@ public class Job implements Serializable {
 	private double salary;
 	
 	@OneToMany(mappedBy = "jb")
-	List<Employee> employees;
+	List<Employee> employees = new ArrayList<Employee>();
 	
 	public List<Employee> getEmployees() {
 		return employees;
