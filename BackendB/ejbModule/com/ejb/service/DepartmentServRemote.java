@@ -2,12 +2,13 @@ package com.ejb.service;
 
 import java.util.List;
 
-import javax.ejb.Local;
+import javax.ejb.Remote;
 
 import com.ejb.entities.Department;
 
-@Local
-public interface DepartmentServiceLocal {
+@Remote
+public interface DepartmentServRemote {
+	
 	public void addDepartment(Department department);
 	public List<Department> getAllDepartments();
 }

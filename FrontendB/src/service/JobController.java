@@ -1,5 +1,6 @@
 package service;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,16 +9,19 @@ import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedProperty;
 
-import com.ejb.service.JobService;
+import com.ejb.service.JobServRemote;
 
 import model.JobModel;
 
 @ManagedBean(value = "jobController")
 @SessionScoped
-public class JobController {
+public class JobController implements Serializable{
 	
+	
+	private static final long serialVersionUID = 1L;
+
 	@EJB
-	private JobService jobService;
+	private JobServRemote jobService;
 	
 	@ManagedProperty(value="#{jobModel}")
 	private JobModel jobModel;

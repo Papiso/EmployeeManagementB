@@ -2,7 +2,6 @@ package com.ejb.service;
 
 import java.util.List;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,21 +10,19 @@ import javax.persistence.TypedQuery;
 import com.ejb.entities.Employee;
 
 /**
- * Session Bean implementation class EmployeeService
+ * Session Bean implementation class EmployeeServ
  */
 @Stateless
-@LocalBean
-public class EmployeeService implements EmployeeServiceLocal {
+public class EmployeeServ implements EmployeeServRemote {
 
 	@PersistenceContext(unitName = "EmpMgmtPU")
 	private EntityManager entityManager;
-   
 	
-    public EmployeeService() {
+    public EmployeeServ() {
         // TODO Auto-generated constructor stub
     }
-
-	@Override
+    
+    @Override
 	public void addEmployee(Employee employee) {
 		entityManager.persist(employee);
 		

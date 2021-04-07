@@ -1,5 +1,6 @@
 package service;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,16 +9,18 @@ import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedProperty;
 
-import com.ejb.service.DepartmentService;
+import com.ejb.service.DepartmentServRemote;
 
 import model.DepartmentModel;
 
 @ManagedBean(value = "departmentController")
 @SessionScoped
-public class DepartmentController {
+public class DepartmentController implements Serializable{
 	
-	 @EJB
-	 private DepartmentService deptservice;
+	private static final long serialVersionUID = 1L;
+
+	@EJB
+	 private DepartmentServRemote deptservice;
 	 
 	 @ManagedProperty(value="#{departmentModel}")
 	 private DepartmentModel departmentModel;

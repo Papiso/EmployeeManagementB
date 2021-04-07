@@ -2,12 +2,13 @@ package com.ejb.service;
 
 import java.util.List;
 
-import javax.ejb.Local;
+import javax.ejb.Remote;
 
 import com.ejb.entities.Job;
 
-@Local
-public interface JobServiceLocal {
+@Remote
+public interface JobServRemote {
+	
 	public void addJob(Job job);
 	public List<Job> getAllJobs();
 }

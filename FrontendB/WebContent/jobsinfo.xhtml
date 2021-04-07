@@ -7,14 +7,14 @@
    xmlns:ui = "http://java.sun.com/jsf/facelets">
    
    <h:body> 
-      <ui:composition template = "templates/template.xhtml">
+      <ui:composition template = "templates/template.xhtml">			
          <ui:define name = "content">
-            <h2>Page2 content</h2>
-            <p> I am aiming to be one of the most competent and innovative IT and <br/>
-            software development professionals in the southern Africa region and the world.<br/>
-            I am determined to venture into industry to bring a great advancement of Technology</p> <br/>            
-            <h:link value = "Back To Home" outcome = "index" />
-         </ui:define> 			
+            <h2>Jobs</h2>
+            <ul>
+				<li><h:link outcome="/allJobs.xhtml">Show All Jobs</h:link></li>
+				<li><h:link outcome="/addJob.xhtml">Add New Job</h:link></li>
+            </ul>
+         </ui:define>			
       </ui:composition> 
    
    </h:body> 
