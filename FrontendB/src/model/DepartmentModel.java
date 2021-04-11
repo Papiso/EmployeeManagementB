@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@ManagedBean(name = "departmentModel")
+@ManagedBean(name ="departmentModel")
 @SessionScoped
 public class DepartmentModel implements Serializable{
 	

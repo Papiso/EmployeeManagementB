@@ -4,16 +4,17 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.ManagedBean;
+
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
 import com.ejb.service.JobServRemote;
 
 import model.JobModel;
 
-@ManagedBean(value = "jobController")
+@ManagedBean(name = "jobController")
 @SessionScoped
 public class JobController implements Serializable{
 	

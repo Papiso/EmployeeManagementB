@@ -4,16 +4,17 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.ManagedBean;
-import javax.ejb.EJB;
+
 import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
+import javax.ejb.EJB;
 import com.ejb.service.DepartmentServRemote;
 
 import model.DepartmentModel;
 
-@ManagedBean(value = "departmentController")
+@ManagedBean(name = "departmentcontroller")
 @SessionScoped
 public class DepartmentController implements Serializable{
 	
